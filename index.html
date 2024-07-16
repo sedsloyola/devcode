@@ -9,14 +9,19 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="/input.css">
-	<!-- <link rel="shortcut icon" href="assets/profile.png" type="image/x-icon"> -->
-	<script src="https://kit.fontawesome.com/a46493c06c.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 	<script src="script.js" defer type="module"></script>
+	<script src="https://kit.fontawesome.com/a46493c06c.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 	<title>Asim Koirala</title>
 </head>
 
-<body class="font-serif w-full">
+<body class="font-serif w-full ">
 
 	<!-- Sidebar Start-->
 	<div class="w-56 h-full bg-slate-100 fixed ease-in duration-200 z-30 flex flex-col -translate-x-56"
@@ -28,11 +33,11 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 
 		<div id="navigations" class="w-full">
 			<ul class="" id="sidebar_navigation">
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer w-full" id="home">Section 1</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="about">Section 2</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer" id="skills">Section 3</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="projects">Section 4</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="contact">Section 5</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="about">EVENTS</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer" id="skills">OUR PUB.</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="projects">TEAM</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="gallery">GALLERY</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="contact">CONTACT US</li>
 			</ul>
 		</div>
 
@@ -45,10 +50,11 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 		<i class="fa-solid fa-bars"></i>
 	</div>
 
-		<i id="scroll_top_circle" class="fa-solid fa-arrow-up rounded-full px-4 p-3 text-white fixed -right-52 bottom-5 bg-purple-300 z-50 transition-all ease-in-out cursor-pointer"></i>
+	<i id="scroll_top_circle"
+		class="fa-solid fa-arrow-up rounded-full px-4 p-3 text-white fixed -right-52 bottom-5 bg-purple-300 z-50 transition-all ease-in-out cursor-pointer"></i>
 
 
-	<!-- Navbar -->
+	<!-- * Navbar -->
 	<nav
 		class="bg-gradient-to-r from-darkBg to-lightBg h-16 w-full flex items-center justify-center fixed shadow-lg z-10">
 
@@ -58,19 +64,126 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 			SEDS-Loyola
 		</div>
 
-		<div id="expanded_navbar" class="hidden w-2/3 h-full text-white navExpand:flex navExpand:items-center navExpand:justify-center">
+		<div id="expanded_navbar"
+			class="hidden w-2/3 h-full text-white navExpand:flex navExpand:items-center navExpand:justify-center">
 			<ul class="flex items-center w-full h-full justify-evenly" id="navigation_items">
-				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="about">Section1</li>
-				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="skills">Section2</li>
-				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="projects">Section3</li>
-				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="contact">Section4</li>
-				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="home">Section5</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
+					id="skills">EVENTS</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
+					id="projects">OUR PUB</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
+					id="contact">TEAM</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
+					id="home">GALLERY</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
+					id="home">CONTACT</li>
 			</ul>
 		</div>
 		<div class="" id="Home"></div>
 	</nav>
 
-	<!-- Body Code start -->
+	<!-- * Body Code start -->
+
+	<div id="home"
+		class="bg-staringImage w-screen h-screen bg-cover flex flex-col logoFits:flex-row logoFits:justify-between">
+		<div class="ml-10 mt-60 inputFits:ml-28 ">
+			<p class="text-3xl text-white inputFits:text-4xl">We are</p>
+			<h1 class="text-4xl text-white inputFits:text-6xl">SEDS-Loyola</h1>
+		</div>
+		<div
+			class="w-60 h-60 ml-10 mr-10 flex justify-center logoFits:mt-64 logoExpand:w-96 logoExpand:h-96 logoExpand:mt-36">
+			<img src="assets/images/logo.png" alt="SEDS Logo">
+		</div>
+	</div>
+
+	<!-- * Events Start -->
+	<div id="events" class="bg-[#f1f2f6] w-full  p-5 flex flex-col EventsRowWise:flex-row">
+		<div>
+			<h1 class="font-bold text-5xl text-lightBg mb-2 text-center">Upcoming Events</h1>
+			<p class="text-xl text-center EventsRowWise:w-[500px] EventsExpand:w-[730px] my-5">Lorem ipsum
+				dolor
+				sit amet consectetur
+				adipisicing elit. Ducimus
+				itaque minima
+				dicta
+				consequatur nesciunt voluptatibus fugit repellendus! Voluptates minus saepe est. Natus,
+				adipisci quidem laudantium magnam eos possimus alias maxime optio quis illo ex voluptatibus
+				incidunt nemo, eveniet porro eius, mollitia aliquam autem magni in.</p>
+		</div>
+		<div class="swiper w-56 eventsCardFit:w-96 h-[500px]">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
+					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
+					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
+					<p class="text-lg"><span class="font-extrabold text-2xl">Date:</span>Feb 30, 2024</p>
+					<p class="text-lg"><span class="font-extrabold text-2xl">Venue:</span>St. Xavier's
+						College, Maitighar</p>
+					<button
+						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
+						Register</button>
+				</div>
+				<div class="swiper-slide rounded-3xl justify-between bg-lightBg text-white text-xl p-4">
+					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
+					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
+					<p>Date: 2099 February 30</p>
+					<button
+						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
+						Register</button>
+				</div>
+				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
+					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
+					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
+					<p>Date: 2099 February 30</p>
+					<button
+						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
+						Register</button>
+				</div>
+				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
+					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
+					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
+					<p>Date: 2099 February 30</p>
+					<button
+						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
+						Register</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-lightBg w-full p-5  text-white text-xl">
+		<div>
+			<h1 class="font-bold text-5xl mb-2 text-center">SEDS-Loyola Annual Publication</h1>
+			<p class="text-xl text-center EventsRowWise:w-[500px] EventsExpand:w-[730px] my-5">Lorem ipsum
+				dolor
+				sit amet consectetur
+				adipisicing elit. Ducimus
+				itaque minima
+				dicta
+				consequatur nesciunt voluptatibus fugit repellendus! Voluptates minus saepe est. Natus,
+				adipisci quidem laudantium magnam eos possimus alias maxime optio quis illo ex voluptatibus
+				incidunt nemo, eveniet porro eius, mollitia aliquam autem magni in.</p>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".swiper", {
+			effect: "cards",
+			grabCursor: true,
+			perSlideOffset: 320,
+			rotate: true
+		});
+	</script>
+
 
 </body>
 
