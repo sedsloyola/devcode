@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff
+
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/input.css">
+	<!-- <link rel="shortcut icon" href="assets/profile.png" type="image/x-icon"> -->
+	<script src="https://kit.fontawesome.com/a46493c06c.js" crossorigin="anonymous"></script>
+	<script src="script.js" defer type="module"></script>
+	<title>Asim Koirala</title>
+</head>
+
+<body class="font-serif w-full">
+
+	<!-- Sidebar Start-->
+	<div class="w-56 h-full bg-slate-100 fixed ease-in duration-200 z-30 flex flex-col -translate-x-56"
+		id="sidebar">
+
+		<div class="text-3xl pr-3 pt-3 flex justify-end"><i class="fa-solid fa-xmark cursor-pointer  h-8"
+				id="xmark"></i>
+		</div>
+
+		<div id="navigations" class="w-full">
+			<ul class="" id="sidebar_navigation">
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer w-full" id="home">Section 1</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="about">Section 2</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer" id="skills">Section 3</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="projects">Section 4</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="contact">Section 5</li>
+			</ul>
+		</div>
+
+
+	</div>
+	<!-- Sidebar End -->
+
+	<div id="hamburger_icon" class="navExpand:hidden text-3xl p-4 cursor-pointer fixed
+	hover:bg-hoverBg h-16 z-20 text-white">
+		<i class="fa-solid fa-bars"></i>
+	</div>
+
+		<i id="scroll_top_circle" class="fa-solid fa-arrow-up rounded-full px-4 p-3 text-white fixed -right-52 bottom-5 bg-purple-300 z-50 transition-all ease-in-out cursor-pointer"></i>
+
+
+	<!-- Navbar -->
+	<nav
+		class="bg-gradient-to-r from-darkBg to-lightBg h-16 w-full flex items-center justify-center fixed shadow-lg z-10">
+
+
+		<div
+			class="text-3xl text-white drop-shadow-xl font-serif hover:bg-hoverBg h-full flex items-center p-5 cursor-pointer">
+			SEDS-Loyola
+		</div>
+
+		<div id="expanded_navbar" class="hidden w-2/3 h-full text-white navExpand:flex navExpand:items-center navExpand:justify-center">
+			<ul class="flex items-center w-full h-full justify-evenly" id="navigation_items">
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="about">Section1</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="skills">Section2</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="projects">Section3</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="contact">Section4</li>
+				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer" id="home">Section5</li>
+			</ul>
+		</div>
+		<div class="" id="Home"></div>
+	</nav>
+
+	<!-- Body Code start -->
+
+</body>
+
+</html>
+
+
+<!-- Notes -->
+
+<!-- Make about paragraph longer -->
