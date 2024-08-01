@@ -15,10 +15,13 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 	<script src="script.js" defer type="module"></script>
+	<script src="data.js"></script>
+
 	<script src="https://kit.fontawesome.com/a46493c06c.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script type="module" src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm"> </script>
 
-	<title>Asim Koirala</title>
+	<title>Seds Loyola</title>
 </head>
 
 <body class="font-serif w-full ">
@@ -61,6 +64,7 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 
 		<div
 			class="text-3xl text-white drop-shadow-xl font-serif hover:bg-hoverBg h-full flex items-center p-5 cursor-pointer">
+			<img src="assets/images/logo.png" alt="SEDS Logo" class="w-12 h-12 mx-4">
 			SEDS-Loyola
 		</div>
 
@@ -70,7 +74,7 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
 					id="skills">EVENTS</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="projects">OUR PUB</li>
+					id="projects">PUBLICATION</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
 					id="contact">TEAM</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
@@ -110,48 +114,15 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 				adipisci quidem laudantium magnam eos possimus alias maxime optio quis illo ex voluptatibus
 				incidunt nemo, eveniet porro eius, mollitia aliquam autem magni in.</p>
 		</div>
-		<div class="swiper w-56 eventsCardFit:w-96 h-[500px]">
+		<div class="swiper eventsSwiper w-56 eventsCardFit:w-96 h-[500px]">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
-					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
-					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
-					<p class="text-lg"><span class="font-extrabold text-2xl">Date:</span>Feb 30, 2024</p>
-					<p class="text-lg"><span class="font-extrabold text-2xl">Venue:</span>St. Xavier's
-						College, Maitighar</p>
-					<button
-						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
-						Register</button>
-				</div>
-				<div class="swiper-slide rounded-3xl justify-between bg-lightBg text-white text-xl p-4">
-					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
-					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
-					<p>Date: 2099 February 30</p>
-					<button
-						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
-						Register</button>
-				</div>
-				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
-					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
-					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
-					<p>Date: 2099 February 30</p>
-					<button
-						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
-						Register</button>
-				</div>
-				<div class="swiper-slide rounded-3xl bg-lightBg text-white text-xl p-4">
-					<h1 class="font-extrabold text-center">National Story Writing Competition</h1>
-					<img src="/assets/images/storyWriting.jpg" alt="Story writing" class="rounded-md my-3">
-					<p>Date: 2099 February 30</p>
-					<button
-						class="w-full h-12 bg-[#f1f2f6] text-darkBg text-3xl font-extrabold cursor-pointer rounded-md my-4">
-						Register</button>
-				</div>
 
 			</div>
 		</div>
 	</div>
 
-	<div class="bg-lightBg w-full p-5  text-white text-xl">
+	<!-- * Annual Publication -->
+	<div class="bg-darkBg w-full p-5  text-white text-xl">
 		<div>
 			<h1 class="font-bold text-5xl mb-2 text-center">SEDS-Loyola Annual Publication</h1>
 			<p class="text-xl text-center EventsRowWise:w-[500px] EventsExpand:w-[730px] my-5">Lorem ipsum
@@ -166,6 +137,27 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 		</div>
 	</div>
 
+	<!-- * Teams -->
+	<div id="teams" class="swiper teamsSwiper w-full relative bg-[#f1f2f6] px-3">
+		<h1 class="font-bold text-5xl text-lightBg mb-2 text-center py-2">Our Team</h1>
+		<div class="swiper-wrapper bg-[#f1f2f6] py-5">
+
+
+		</div>
+
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-pagination"></div>
+		<div
+			class="autoplay-progress absolute right-4 bottom-4 z-30 w-12 h-48 flex items-center justify-center font-bold text-darkBg">
+			<svg viewBox="0 0 48 48">
+				<circle cx="24" cy="24" r="20"></circle>
+			</svg>
+			<span></span>
+		</div>
+	</div>
+
+
 
 
 
@@ -176,12 +168,54 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 
 	<!-- Initialize Swiper -->
 	<script>
-		var swiper = new Swiper(".swiper", {
+
+		let eventsContainer = document.querySelector('#events .eventsSwiper .swiper-wrapper');
+		eventsData.forEach(data => {
+			const { title, image, date, venue, registerLink } = data;
+			eventsContainer.innerHTML += eventsTemplate(title, image, date, venue, registerLink);
+		});
+
+		var swiper = new Swiper(".eventsSwiper", {
 			effect: "cards",
 			grabCursor: true,
 			perSlideOffset: 320,
 			rotate: true
 		});
+
+		// For teams Swiper
+
+		let teamContainer = document.querySelector('#teams .swiper-wrapper');
+		team.forEach(data => {
+			const { fullName, image, post, about } = data;
+			teamContainer.innerHTML += teamTemplate(fullName, image, post, about);
+		});
+
+
+		const progressCircle = document.querySelector(".autoplay-progress svg");
+		const progressContent = document.querySelector(".autoplay-progress span");
+		var swiper = new Swiper(".teamsSwiper", {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 25000000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev"
+			},
+			on: {
+				autoplayTimeLeft(s, time, progress) {
+					progressCircle.style.setProperty("--progress", 1 - progress);
+					progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+				}
+			}
+		});
+
 	</script>
 
 
