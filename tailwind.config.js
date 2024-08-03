@@ -13,7 +13,8 @@ module.exports = {
       'logoExpand': '750px',
       'eventsCardFit': '500px',
       'EventsRowWise': '1100px',
-      'EventsExpand': '1350px'
+      'EventsExpand': '1350px', 
+      'teamsImageExpand': '800px'
     },
     extend: {
       colors: {

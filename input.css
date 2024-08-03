@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" */
-
 a[href^="#"] {
     scroll-behavior: smooth;
 }
@@ -23,3 +21,19 @@ a[href^="#"] {
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
 }
+
+.carousel .slick-prev, .carousel .slick-next {
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        cursor: pointer;
+        zoom: 2;
+    }
+
+.carousel .slick-prev {
+        left: -8px;
+    }
+.carousel .slick-next {
+        right: 12px;
+    }

@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "particles.js": "^2.0.0",
+    "photoswipe": "^5.4.4",
     "swiper": "^11.1.5",
     "typed.js": "^2.1.0"
   }

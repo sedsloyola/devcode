@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- 
-Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff
-
--->
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +9,27 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-	<script src="script.js" defer type="module"></script>
-	<script src="data.js"></script>
+	<script src="scripts/script.js" defer type="module"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/navigation.js" defer></script>
+	<script src="scripts/email.js" defer></script>
 
 	<script src="https://kit.fontawesome.com/a46493c06c.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script type="module" src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm"> </script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 	<title>Seds Loyola</title>
 </head>
 
 <body class="font-serif w-full ">
+	<div id="email_success" class="bg-slate-200 w-64 h-14 fixed -right-96 top-5 rounded-lg z-50 flex items-center justify-center text-lg drop-shadow-xl transition-all ease-in-out">
+		<p class="drop-shadow-2xl text-lg text-cyan-600 text-justify">Your Message has been sent!</p>
+	</div>
+
+	<div id="email_failure" class="bg-slate-200 -right-96 w-64 h-24 fixed  top-5 rounded-lg z-50 flex items-center justify-center text-sm drop-shadow-xl transition-all ease-in-out">
+		<p class="drop-shadow-2xl text-lg text-cyan-600 text-justify">There was a problem sending the message. Please try again later.</p>
+	</div>
 
 	<!-- Sidebar Start-->
 	<div class="w-56 h-full bg-slate-100 fixed ease-in duration-200 z-30 flex flex-col -translate-x-56"
@@ -36,9 +41,9 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 
 		<div id="navigations" class="w-full">
 			<ul class="" id="sidebar_navigation">
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="about">EVENTS</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer" id="skills">OUR PUB.</li>
-				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="projects">TEAM</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="events">EVENTS</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer" id="publication">OUR PUB.</li>
+				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="team">TEAM</li>
 				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="gallery">GALLERY</li>
 				<li class="text-3xl text-darkBg px-10 py-5 cursor-pointer " id="contact">CONTACT US</li>
 			</ul>
@@ -54,17 +59,15 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 	</div>
 
 	<i id="scroll_top_circle"
-		class="fa-solid fa-arrow-up rounded-full px-4 p-3 text-white fixed -right-52 bottom-5 bg-purple-300 z-50 transition-all ease-in-out cursor-pointer"></i>
+		class="fa-solid fa-arrow-up rounded-full px-4 p-3 text-white fixed right-5 bottom-5 bg-purple-300 z-50 transition-all ease-in-out cursor-pointer"></i>
 
 
 	<!-- * Navbar -->
 	<nav
 		class="bg-gradient-to-r from-darkBg to-lightBg h-16 w-full flex items-center justify-center fixed shadow-lg z-10">
-
-
-		<div
+		<div id="Seds_Loyola_nav"
 			class="text-3xl text-white drop-shadow-xl font-serif hover:bg-hoverBg h-full flex items-center p-5 cursor-pointer">
-			<img src="assets/images/logo.png" alt="SEDS Logo" class="w-12 h-12 mx-4">
+			<img src="assets/images/logo.png" alt="SEDS Logo" class="w-12 h-12 mx-4" >
 			SEDS-Loyola
 		</div>
 
@@ -72,15 +75,15 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 			class="hidden w-2/3 h-full text-white navExpand:flex navExpand:items-center navExpand:justify-center">
 			<ul class="flex items-center w-full h-full justify-evenly" id="navigation_items">
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="skills">EVENTS</li>
+					id="events">EVENTS</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="projects">PUBLICATION</li>
+					id="publication">PUBLICATION</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="contact">TEAM</li>
+					id="team">TEAM</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="home">GALLERY</li>
+					id="gallery">GALLERY</li>
 				<li class="text-xl w-full text-center h-full flex items-center justify-center hover:bg-hoverBg cursor-pointer"
-					id="home">CONTACT</li>
+					id="contact">CONTACT</li>
 			</ul>
 		</div>
 		<div class="" id="Home"></div>
@@ -88,7 +91,7 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 
 	<!-- * Body Code start -->
 
-	<div id="home"
+	<div id="Home"
 		class="bg-staringImage w-screen h-screen bg-cover flex flex-col logoFits:flex-row logoFits:justify-between">
 		<div class="ml-10 mt-60 inputFits:ml-28 ">
 			<p class="text-3xl text-white inputFits:text-4xl">We are</p>
@@ -101,7 +104,7 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 	</div>
 
 	<!-- * Events Start -->
-	<div id="events" class="bg-[#f1f2f6] w-full  p-5 flex flex-col EventsRowWise:flex-row">
+	<div id="Events" class="bg-[#f1f2f6] w-full  p-5 flex flex-col EventsRowWise:flex-row">
 		<div>
 			<h1 class="font-bold text-5xl text-lightBg mb-2 text-center">Upcoming Events</h1>
 			<p class="text-xl text-center EventsRowWise:w-[500px] EventsExpand:w-[730px] my-5">Lorem ipsum
@@ -115,14 +118,14 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 				incidunt nemo, eveniet porro eius, mollitia aliquam autem magni in.</p>
 		</div>
 		<div class="swiper eventsSwiper w-56 eventsCardFit:w-96 h-[500px]">
-			<div class="swiper-wrapper">
-
+			<div class="swiper-wrapper rounded-lg">
+				
 			</div>
 		</div>
 	</div>
 
 	<!-- * Annual Publication -->
-	<div class="bg-darkBg w-full p-5  text-white text-xl">
+	<div class="bg-darkBg w-full p-5  text-white text-xl" id="Publication">
 		<div>
 			<h1 class="font-bold text-5xl mb-2 text-center">SEDS-Loyola Annual Publication</h1>
 			<p class="text-xl text-center EventsRowWise:w-[500px] EventsExpand:w-[730px] my-5">Lorem ipsum
@@ -137,8 +140,9 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 		</div>
 	</div>
 
-	<!-- * Teams -->
-	<div id="teams" class="swiper teamsSwiper w-full relative bg-[#f1f2f6] px-3">
+	<!--  Teams -->
+
+	<div id="Team" class="swiper teamsSwiper w-full relative bg-[#f1f2f6] px-3">
 		<h1 class="font-bold text-5xl text-lightBg mb-2 text-center py-2">Our Team</h1>
 		<div class="swiper-wrapper bg-[#f1f2f6] py-5">
 
@@ -157,67 +161,67 @@ Color palette: https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4
 		</div>
 	</div>
 
+	<!-- Gallery -->
 
+	<div class="bg-lightBg p-5" id="Gallery">
+		<h1 class="font-bold text-5xl text-white mb-4 text-center ">Gallery</h1>
+	  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" thumbsSlider="" class="swiper gallerySwiper2 p-5">
+		<div class="swiper-wrapper">
+		  
+		</div>
 
+		<div class="swiper-button-next gallery-next"></div>
+		<div class="swiper-button-prev gallery-prev"></div>
+	  </div>
+	</div>
 
+<!-- Contact Section -->
+<div id="Contact" class="bg-[#f1f2f6] pb-10">
+	<div class="flex flex-col items-center justify-center py-5 ">
+		<h1 class="font-bold text-5xl text-darkBg">Contact Us</h1>
+	</div>
 
+	<div>
+		<p class="drop-shadow-2xl text-xl text-darkBg text-justify px-4 mb-3">Got a cool idea ? Contact us.</p>
 
+		<div id="info_abt_me" class="flex flex-col textareaFits:flex-row items-center justify-center">
+			<div class="flex items-center w-full px-5 py-3">
+				<i class="fa-solid fa-location-dot text-3xl text-darkBg"></i>
+				<div class="flex flex-col justify-center px-3">
+					<p class="text-darkBg text-xl font-extrabold">Address</p>
+					<p class="text-darkBg text-lg">St. Xavier's College, Maitighar, Kathmandu, Nepal</p>
+				</div>
+			</div>
+			<div class="flex items-center w-full px-5 py-3">
+				<i class="fa-solid fa-envelope text-3xl text-darkBg"></i>
+				<div class="flex flex-col justify-center px-3">
+					<p class="text-darkBg text-xl font-extrabold">Email</p>
+					<p class="text-darkBg text-lg">seds.loyola@sxc.edu.np</p>
+				</div>
+			</div>
+		</div>
 
+		<form action="#" id="contact_form" class="mx-5">
+			<div class="flex flex-col textareaFits:flex-row">
+				<div class="flex flex-col inputFits:flex-row textareaFits:w-1/2 items-start justify-between">
+					<input type="text" class="w-full inputFits:mr-2 mb-3 p-2 rounded-lg border-2 border-slate-200 drop-shadow-xl bg-hoverBg text-white placeholder:text-white" name="user_name" id="name" placeholder="Name" required>
+					<input type="email" class="w-full inputFits:ml-2 textareaFits:mr-2 mb-3 p-2 rounded-lg border-2 border-slate-200 drop-shadow-xl bg-hoverBg text-white placeholder:text-white" name="user_email" id="user_email" placeholder="Email" required>
+				</div>
+				<textarea name="message" rows="10" cols="28" class="textareaFits:mr-2 resize mb-3 p-2 rounded-lg border-2 border-slate-200 drop-shadow-xl w-full textareaFits:w-1/2 bg-hoverBg text-white placeholder:text-white" id="message" placeholder="Message" required></textarea>
+			</div>
+			<div class="flex justify-center">
+				<button type="submit" class="bg-darkBg py-3 px-3 my-3 rounded-xl text-white cursor-pointer font-extrabold text-2xl hover:bg-hoverBg transition ease-in-out" id="submit_btn">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
 
-
+<div id="Footer" class="bg-lightBg text-white text-xl p-5 ">
+	<p class="text-center">Created with ❤️ by Asim Koirala. &copy; 2024 SEDS Loyola. All Rights Reserved.</p>
+</div>
 
 	<!-- Initialize Swiper -->
-	<script>
-
-		let eventsContainer = document.querySelector('#events .eventsSwiper .swiper-wrapper');
-		eventsData.forEach(data => {
-			const { title, image, date, venue, registerLink } = data;
-			eventsContainer.innerHTML += eventsTemplate(title, image, date, venue, registerLink);
-		});
-
-		var swiper = new Swiper(".eventsSwiper", {
-			effect: "cards",
-			grabCursor: true,
-			perSlideOffset: 320,
-			rotate: true
-		});
-
-		// For teams Swiper
-
-		let teamContainer = document.querySelector('#teams .swiper-wrapper');
-		team.forEach(data => {
-			const { fullName, image, post, about } = data;
-			teamContainer.innerHTML += teamTemplate(fullName, image, post, about);
-		});
-
-
-		const progressCircle = document.querySelector(".autoplay-progress svg");
-		const progressContent = document.querySelector(".autoplay-progress span");
-		var swiper = new Swiper(".teamsSwiper", {
-			spaceBetween: 30,
-			centeredSlides: true,
-			autoplay: {
-				delay: 25000000,
-				disableOnInteraction: false
-			},
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true
-			},
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev"
-			},
-			on: {
-				autoplayTimeLeft(s, time, progress) {
-					progressCircle.style.setProperty("--progress", 1 - progress);
-					progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-				}
-			}
-		});
-
-	</script>
-
+	<script src="scripts/swipes.js"></script>
 
 </body>
 
