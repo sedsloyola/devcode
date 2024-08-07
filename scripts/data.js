@@ -161,4 +161,25 @@ let galleryTemplate = (url)=>
 
 `
 
+let imageFolderPath = "/assets/images/homepage/"; // Changed to imageFolderPath
+let imageFiles = [
+    imageFolderPath + "001.jpg",
+    imageFolderPath + "002.jpg",
+    imageFolderPath + "003.jpg",
+    imageFolderPath + "004.jpg",
+    imageFolderPath + "005.jpg",
+    imageFolderPath + "006.jpg",
+    imageFolderPath + "007.jpg",
+    imageFolderPath + "008.jpg",
+    imageFolderPath + "009.jpg",
+    imageFolderPath + "010.jpg",
+];
+
+let imageTemplate = (url)=>`
+    <div class="swiper-slide w-full">
+			<img src="${url}" class="rounded-lg w-full" />
+	</div>
+`
+    
+
 
